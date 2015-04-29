@@ -1,0 +1,49 @@
+﻿<%@ Master Language="C#"%>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Demo7Master</title>
+    <%--Client Script, --%>
+    <script type="text/javascript">
+        alert("Master Page JavaScript");
+    </script>
+
+    <%--Server Code,--%>
+    <script runat="server">
+        protected void Button1_Click(object sender, EventArgs e)
+        {
+            TextBox1.Text = "Text from the Master's Server Control";
+        }
+    </script>
+
+    <%--CSS--%>
+    <style>
+        .redColor {
+            border: medium dashed #FF0000;
+        }
+    </style>
+
+    <asp:ContentPlaceHolder ID="ContentPlaceHead" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        Client Script, Server Code, CSS, Standard HTML, and Web Server Controls
+        <br />
+        can all placed in both the Master page and Content pages.<br />
+        <asp:TextBox ID="TextBox1" runat="server" Width="362px"></asp:TextBox>
+        <br />
+        <asp:Button ID="Button1" runat="server" Text="Button" OnClick="Button1_Click" />
+        &nbsp;View Source to see this placement!
+        <hr class="redColor" />
+        <div id="Div1">
+            <asp:ContentPlaceHolder ID="ContentPlaceHolderFormDiv1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+        <div id="Div2">
+            <asp:ContentPlaceHolder ID="ContentPlaceHolderFormDiv2" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+    </form>
+</body>
+</html>
