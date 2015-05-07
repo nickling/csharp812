@@ -7,12 +7,12 @@
     <ProductVersion>
     </ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{B322FA74-9E7A-4639-9C5D-BC95EA6374D4}</ProjectGuid>
+    <ProjectGuid>{319C0BC8-30CA-46DE-89D1-E50CB1F73FA1}</ProjectGuid>
     <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Lesson04</RootNamespace>
-    <AssemblyName>Lesson04</AssemblyName>
+    <RootNamespace>Lesson06</RootNamespace>
+    <AssemblyName>Lesson06</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <UseIISExpress>true</UseIISExpress>
     <IISExpressSSLPort />
@@ -57,7 +57,7 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Lesson04.Master" />
+    <Content Include="Lesson06Site.Master" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -66,26 +66,59 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="02JavaScriptTryCatch.aspx" />
+    <Content Include="01PostAndGet.aspx" />
+    <Content Include="02ObjectStateAsString.aspx" />
+    <Content Include="04HiddenFields.aspx" />
+    <Content Include="05aSessionVariables.aspx" />
+    <Content Include="05cReadingASessionVariable.aspx" />
+    <Content Include="Demo1.html" />
     <Content Include="Web.config" />
-    <Content Include="01TryCatch.aspx" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Lesson04.Master.cs">
-      <DependentUpon>Lesson04.Master</DependentUpon>
+    <Compile Include="01PostAndGet.aspx.cs">
+      <DependentUpon>01PostAndGet.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Lesson04.Master.designer.cs">
-      <DependentUpon>Lesson04.Master</DependentUpon>
+    <Compile Include="01PostAndGet.aspx.designer.cs">
+      <DependentUpon>01PostAndGet.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="02ObjectStateAsString.aspx.cs">
+      <DependentUpon>02ObjectStateAsString.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="02ObjectStateAsString.aspx.designer.cs">
+      <DependentUpon>02ObjectStateAsString.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="04HiddenFields.aspx.cs">
+      <DependentUpon>04HiddenFields.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="04HiddenFields.aspx.designer.cs">
+      <DependentUpon>04HiddenFields.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="05aSessionVariables.aspx.cs">
+      <DependentUpon>05aSessionVariables.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="05aSessionVariables.aspx.designer.cs">
+      <DependentUpon>05aSessionVariables.aspx</DependentUpon>
+    </Compile>
+    <Content Include="App_Code\05bPerson.cs" />
+    <Compile Include="05cReadingASessionVariable.aspx.cs">
+      <DependentUpon>05cReadingASessionVariable.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="05cReadingASessionVariable.aspx.designer.cs">
+      <DependentUpon>05cReadingASessionVariable.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Lesson06Site.Master.cs">
+      <DependentUpon>Lesson06Site.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Lesson06Site.Master.designer.cs">
+      <DependentUpon>Lesson06Site.Master</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="01TryCatch.aspx.cs">
-      <DependentUpon>01TryCatch.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="01TryCatch.aspx.designer.cs">
-      <DependentUpon>01TryCatch.aspx</DependentUpon>
-    </Compile>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
@@ -100,9 +133,9 @@
         <WebProjectProperties>
           <UseIIS>True</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>53268</DevelopmentServerPort>
+          <DevelopmentServerPort>65052</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:53268/</IISUrl>
+          <IISUrl>http://localhost:65052/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>

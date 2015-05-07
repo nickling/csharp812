@@ -1,0 +1,27 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="Homework03.Site" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+
+    <form id="form1" runat="server">
+        <nav runat="server">
+            <asp:LinkButton ID="LinkButton1" runat="server" PostBackUrl="~/Home.aspx">[Home]</asp:LinkButton>
+            <asp:LinkButton ID="LinkButton2" runat="server" PostBackUrl="~/LoginRequest.aspx">[Login Request]</asp:LinkButton>
+            <asp:LinkButton ID="LinkButton3" runat="server" PostBackUrl="~/AboutUs.aspx">[About Us]</asp:LinkButton>
+        </nav>
+    <div>
+
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+    </div>
+    </form>
+</body>
+</html>

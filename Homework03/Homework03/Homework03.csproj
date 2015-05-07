@@ -7,12 +7,12 @@
     <ProductVersion>
     </ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{B322FA74-9E7A-4639-9C5D-BC95EA6374D4}</ProjectGuid>
+    <ProjectGuid>{4B444A13-C11A-49D2-AA84-C0C12E3846E9}</ProjectGuid>
     <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Lesson04</RootNamespace>
-    <AssemblyName>Lesson04</AssemblyName>
+    <RootNamespace>Homework03</RootNamespace>
+    <AssemblyName>Homework03</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <UseIISExpress>true</UseIISExpress>
     <IISExpressSSLPort />
@@ -57,7 +57,10 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Lesson04.Master" />
+    <Content Include="Site.Master" />
+    <Content Include="Home.aspx" />
+    <Content Include="LoginRequest.aspx" />
+    <Content Include="AboutUs.aspx" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -66,25 +69,37 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="02JavaScriptTryCatch.aspx" />
     <Content Include="Web.config" />
-    <Content Include="01TryCatch.aspx" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Lesson04.Master.cs">
-      <DependentUpon>Lesson04.Master</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Lesson04.Master.designer.cs">
-      <DependentUpon>Lesson04.Master</DependentUpon>
-    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="01TryCatch.aspx.cs">
-      <DependentUpon>01TryCatch.aspx</DependentUpon>
+    <Compile Include="Site.Master.cs">
+      <DependentUpon>Site.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="01TryCatch.aspx.designer.cs">
-      <DependentUpon>01TryCatch.aspx</DependentUpon>
+    <Compile Include="Site.Master.designer.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Home.aspx.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Home.aspx.designer.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="LoginRequest.aspx.cs">
+      <DependentUpon>LoginRequest.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LoginRequest.aspx.designer.cs">
+      <DependentUpon>LoginRequest.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AboutUs.aspx.cs">
+      <DependentUpon>AboutUs.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AboutUs.aspx.designer.cs">
+      <DependentUpon>AboutUs.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <PropertyGroup>
@@ -100,9 +115,9 @@
         <WebProjectProperties>
           <UseIIS>True</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>53268</DevelopmentServerPort>
+          <DevelopmentServerPort>54519</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:53268/</IISUrl>
+          <IISUrl>http://localhost:54519/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>

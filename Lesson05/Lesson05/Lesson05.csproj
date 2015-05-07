@@ -7,12 +7,12 @@
     <ProductVersion>
     </ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{B322FA74-9E7A-4639-9C5D-BC95EA6374D4}</ProjectGuid>
+    <ProjectGuid>{C7BB9164-6F93-4C61-B296-142A57CAC1BE}</ProjectGuid>
     <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Lesson04</RootNamespace>
-    <AssemblyName>Lesson04</AssemblyName>
+    <RootNamespace>Lesson05</RootNamespace>
+    <AssemblyName>Lesson05</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <UseIISExpress>true</UseIISExpress>
     <IISExpressSSLPort />
@@ -57,7 +57,8 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Lesson04.Master" />
+    <Content Include="02WorkingWithJQuery.aspx" />
+    <Content Include="Lesson5Site.Master" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -66,27 +67,22 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="02JavaScriptTryCatch.aspx" />
+    <Content Include="01WorkingWithJavaScript.html" />
+    <Content Include="Scripts\ExternalJavaScriptFile.js" />
+    <Content Include="Scripts\jquery-1.11.2.min.js" />
+    <Content Include="Scripts\jquery-2.1.3.min.js" />
     <Content Include="Web.config" />
-    <Content Include="01TryCatch.aspx" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Lesson04.Master.cs">
-      <DependentUpon>Lesson04.Master</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
+    <Compile Include="Lesson5Site.Master.cs">
+      <DependentUpon>Lesson5Site.Master</DependentUpon>
     </Compile>
-    <Compile Include="Lesson04.Master.designer.cs">
-      <DependentUpon>Lesson04.Master</DependentUpon>
+    <Compile Include="Lesson5Site.Master.designer.cs">
+      <DependentUpon>Lesson5Site.Master</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="01TryCatch.aspx.cs">
-      <DependentUpon>01TryCatch.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="01TryCatch.aspx.designer.cs">
-      <DependentUpon>01TryCatch.aspx</DependentUpon>
-    </Compile>
   </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
@@ -100,9 +96,9 @@
         <WebProjectProperties>
           <UseIIS>True</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>53268</DevelopmentServerPort>
+          <DevelopmentServerPort>59916</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:53268/</IISUrl>
+          <IISUrl>http://localhost:59916/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>
