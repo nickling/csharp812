@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Demo03</title>
+</head>
+<body>
+    <h1>This is a Test Form</h1>
+    <p>The input tag provide a number of browser controls allowing a page to be interactive</p>
+
+    <form>
+        <!-- These are both the default values!-->
+        <input type="text" name="txtUserName" />&nbsp; Enter your name<br />
+        <input type="button" value="Submit" onclick="readText(this.form)" /> <!--this = self. this refers to the DOM-->
+        <!--type="Submit" means you don't need to use javascript. "Submit" will do it for you automatically-->
+    </form>
+</body>
+</html>
+
+<script type="text/javascript">
+    // You want this to be at the bottom so the presentation comes first. Performance improvements.
+    // Add on Top if the JS is part of presentation.
+    function readText(objForm) {
+        strTestVar = objForm.txtUserName.value;
+        alert("You typed: " + strTestVar);
+        // Debug only works in IE. 
+        // IE --> Tools --> Options --> F12 Developer tools.
+        // Telerik --> Fidler 
+    }
+</script>
