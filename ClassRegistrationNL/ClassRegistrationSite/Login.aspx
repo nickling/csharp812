@@ -37,7 +37,8 @@
     <asp:Button ID="btnLogin" runat="server" OnClick="btnLogin_Click" Text="Login" />
 
     <asp:LinkButton href="NewLogin.aspx" ID="LinkButton7" runat="server">Create new Login</asp:LinkButton>
-    <asp:Label ID="lblLoginFailed" runat="server" Visible="False"></asp:Label>
+    <br />
+    <asp:Label ID="lblLoginFailed" runat="server" Visible="False" ForeColor="Red"></asp:Label>
 
 
 </asp:Content>

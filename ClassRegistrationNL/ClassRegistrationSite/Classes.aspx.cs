@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using System.Data;
 
 namespace ClassRegistrationSite
 {
@@ -20,6 +21,12 @@ namespace ClassRegistrationSite
                 LinkButton LinkButtonRegister = (LinkButton)Master.FindControl("LinkButtonRegister");
                 LinkButtonRegister.Visible = true;
             }
+            GridView1.DataSource = null;
+            Student student = (Student)(Session["Student"]);
+            Students students = new Students();
+            DataTable dt = students.GetClasses();
+            GridView1.DataSource = dt;
+            GridView1.DataBind();
         }
     }
 }

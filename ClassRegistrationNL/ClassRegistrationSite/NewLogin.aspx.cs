@@ -15,6 +15,15 @@ namespace ClassRegistrationSite
         {
             Students students = new Students();
             students.InsertNewLogin(txtName.Text, txtEmail.Text, txtLoginName.Text, RadioButtonList1.SelectedValue.ToString(), txtReasonForAccess.Text, Calendar1.SelectedDate);
+
+            txtName.Text = "";
+            txtEmail.Text = "";
+            txtLoginName.Text = "";
+            RadioButtonList1.Text = "";
+            txtReasonForAccess.Text = "";
+            //Calendar1. = "";
+            Label1.Visible = true;
+            Label1.Text = "You've successfully added a new login!";
         }
     }
 }

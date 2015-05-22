@@ -65,8 +65,6 @@
   <ItemGroup>
     <Content Include="ClassRegistrationSite.Master" />
     <Content Include="Images\huskies.gif" />
-    <Content Include="Images\tables.png" />
-    <Content Include="Images\webPages.png" />
     <Content Include="packages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>

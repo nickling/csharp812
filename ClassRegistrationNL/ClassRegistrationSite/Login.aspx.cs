@@ -33,36 +33,34 @@ namespace ClassRegistrationSite
 
         protected void btnLogin_Click(object sender, EventArgs e)
         {
+            lblLoginFailed.Visible = false;
             try
             {
                 Students students = new Students();
                 Student student = students.GetStudentByLogin(tbStudentLogin.Text, tbStudentPassword.Text);
-                Student.LoggedIn = true;
 
-                if (student == null){
+                if (student == null)
+                {
                     lblLoginFailed.Text = "UserName or password is incorrect. ";
                     lblLoginFailed.Visible = true;
                 }
                 else
                 {
+                    Student.LoggedIn = true;
                     Session["Student"] = student;
                     lblLoginFailed.Visible = false;
 
                     Response.Redirect("MyClasses.aspx");
                 }
-                
-            }
-            catch (Exception)
-            {
 
-                throw;
+            }
+            catch (Exception ex)
+            {
+                lblLoginFailed.Text = "UserName or password is incorrect. ";
+                lblLoginFailed.Visible = true;
             }
         }
-
     }
-
-
-
 }
 
 

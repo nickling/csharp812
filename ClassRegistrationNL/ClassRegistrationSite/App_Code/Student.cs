@@ -5,17 +5,22 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Data;
+using System.Data.OleDb;
 
 namespace ClassRegistrationSite
 {
+    // Student Object is created when someone logs on. It is then stored in the session. 
     public class Student
     {
+
+        public static bool LoggedIn { get; set; }
+
         public int StudentId { get; set; }
         public string StudentName { get; set; }
         public string StudentEmail { get; set; }
         public string StudentLogin { get; set; }
         public string StudentPassword { get; set; }
-        public static bool LoggedIn { get; set; }
+        
 
         public void Load(SqlDataReader reader)
         {

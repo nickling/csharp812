@@ -42,4 +42,5 @@
         <PagerStyle BackColor="#7F00FF" ForeColor="White" />
         <RowStyle BackColor="#FDF8FF" />
     </asp:GridView>
+    <asp:Label ID="Label3" runat="server" ForeColor="Red">You already signed up for this class!</asp:Label>
 </asp:Content>

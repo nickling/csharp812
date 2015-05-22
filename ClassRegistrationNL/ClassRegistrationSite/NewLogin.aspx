@@ -55,4 +55,7 @@
 
     <br />
     <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="Submit" />
+
+    <br />
+    <asp:Label ID="Label1" runat="server" Visible="False" ForeColor="Orange"></asp:Label>
 </asp:Content>

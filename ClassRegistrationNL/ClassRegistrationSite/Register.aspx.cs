@@ -12,6 +12,8 @@ namespace ClassRegistrationSite
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            Label3.Visible = false;
+
             LinkButton LinkButtonMyClasses = (LinkButton)Master.FindControl("LinkButtonMyClasses");
             LinkButtonMyClasses.Visible = true;
 
@@ -28,12 +30,13 @@ namespace ClassRegistrationSite
             {
                 Student student = (Student)(Session["Student"]);
                 Students students = new Students();
-                students.InsertStudentClass(student.StudentId, int.Parse(DropDownList1.SelectedValue.ToString()));
+                students.InsClassStudent(student.StudentId, int.Parse(DropDownList1.SelectedValue.ToString()));
                 PopulateGridView();
             }
             catch(Exception ex)
             {
-                Label2.Text = "You already registered for this class";
+                Label3.Visible = true;
+                Label3.Text = "You have already registered for this class";
             }
         }
         private void PopulateGridView()

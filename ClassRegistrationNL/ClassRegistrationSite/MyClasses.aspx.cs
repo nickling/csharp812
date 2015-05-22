@@ -12,11 +12,15 @@ namespace ClassRegistrationSite
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            LinkButton LinkButtonMyClasses = (LinkButton)Master.FindControl("LinkButtonMyClasses");
-            LinkButtonMyClasses.Visible = true;
+            // If Logged in, display the "Register for Classes" and "My Classes" linkbuttons.
+            if (Student.LoggedIn)
+            {
+                LinkButton LinkButtonMyClasses = (LinkButton)Master.FindControl("LinkButtonMyClasses");
+                LinkButtonMyClasses.Visible = true;
 
-            LinkButton LinkButtonRegister = (LinkButton)Master.FindControl("LinkButtonRegister");
-            LinkButtonRegister.Visible = true;
+                LinkButton LinkButtonRegister = (LinkButton)Master.FindControl("LinkButtonRegister");
+                LinkButtonRegister.Visible = true;
+            }
 
             GridView1.DataSource = null;
             Student student = (Student)(Session["Student"]);
