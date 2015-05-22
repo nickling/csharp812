@@ -1,0 +1,32 @@
+﻿@{ 
+    var msg = "";
+    if (IsPost)
+    {
+        float firstNum = float.Parse(Request["intFirstNum"]);
+        float secondNum = float.Parse(Request["intSecondNum"]);
+        // Collect the data from the Input textboxes on the page - only after you click the submit button
+        float finalAns = firstNum + secondNum;
+        
+        // calculate the text
+        msg = "The Sum of " + firstNum + " and " + secondNum + " is " + finalAns;
+    }   
+}
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+    </head>
+    <body>
+
+        <form action="" method="post">
+
+            <p>Enter two numbers and then click the <span style="font-weight:bold">'Add Values'</span> button</p>
+            <p><label for="intFirstNum">First Number:</label> <input type="text" name="intFirstNum" /> </p>
+            <p><label for="intSecondNum">Second Number:</label> <input type="text" name="intSecondNum" /> </p>
+            <p><input type="submit" value="Add Values" /></p>
+        </form>
+
+        <p>@msg</p>
+</body>
+</html>

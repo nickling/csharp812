@@ -1,0 +1,26 @@
+﻿@{
+    var txtFullName = "";
+    if (IsPost)
+    {
+        // Collect the data from the Input textboxes on the page - only after you click the submit button
+        txtFullName = Request["txtFirstName"] + " " + Request["txtLastName"];
+    }
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Demo4</title>
+</head>
+<body>
+    <form action="" method="post">
+        @* Note these are not an ASP:Labels, but are instead HTML 4.01+ tags
+            used to specify a label for another element on the page. *@
+        <p><label for="txtFirstName">First Name:</label> <input type="text" name="txtFirstName" /> </p>
+        <p><label for="txtLastName">Last Name:</label> <input type="text" name="txtLastName" /> </p>
+        <p><input type="submit" value="Get Full Name" /></p>
+    </form>
+
+    <p>The Full Name is @txtFullName</p>
+</body>
+</html>

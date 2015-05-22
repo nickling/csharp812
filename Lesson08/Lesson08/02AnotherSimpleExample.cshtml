@@ -1,0 +1,22 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <!-- You can choose to use Single statement blocks like these... -->
+    @{ var Tomorrow = DateTime.Now.AddDays(-1).DayOfWeek; }
+    @{ var Message = @"This is a ""Test"": "; }@*Note that the @ symbol has more than one meaning!*@
+
+    <!-- Or Multi-statement blocks like this one... -->
+    @{
+        var Today = DateTime.Now.DayOfWeek;
+        var FullMessage = Message + " Today is " + Today + ", which is before " + Tomorrow;
+    }
+</head>
+<body>
+    <!-- Now you can mix the variables you have created with using Inline expressions like these... -->
+    <h1>WebPage2</h1>
+    <p>@FullMessage</p>
+    <hr />
+    <h1>Make sure to view the Source Code!</h1>
+</body>
+</html>

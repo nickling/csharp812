@@ -1,0 +1,39 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="ClassRegistrationSite.master.cs" Inherits="ClassRegistrationSite.ClassRegistrationSite" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Class Registration Site</title>
+    <asp:ContentPlaceHolder ID="head" runat="server"></asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+        
+        <header style="background-color: #400080; min-height: 30px; padding: 10px 10px 10px 10px; font-size: 30px; color: white;">
+            Class Registration Site
+        </header>
+
+        <!--Nav-->
+        <nav style="background-color: #fff; min-height: 30px; padding: 10px 10px 10px 10px; color: white;" runat="server">
+            <asp:LinkButton  href="Default.aspx" ID="LinkButton1" runat="server"> [ Home ] </asp:LinkButton>
+            <asp:LinkButton href="Classes.aspx" ID="LinkButton2" runat="server"> [ Classes ] </asp:LinkButton>
+            <asp:LinkButton href="Login.aspx" ID="LinkButton5" runat="server"> [ Login ] </asp:LinkButton>
+            <asp:LinkButton href="Register.aspx" Visible="false" ID="LinkButtonRegister" runat="server"> [ Register for Classes ] </asp:LinkButton>
+            <asp:LinkButton href="MyClasses.aspx" Visible="false" ID="LinkButtonMyClasses" runat="server"> [ My Classes ] </asp:LinkButton>
+        </nav>
+
+        <!--main body-->
+        <div style="background-color: #e5e5f2; min-height: 300px; padding: 10px 10px 10px 10px;">
+            <asp:ContentPlaceHolder ID="MainWindow" runat="server"></asp:ContentPlaceHolder>
+        </div>
+
+        <!--footer-->
+        <footer style="padding: 10px 10px 10px 10px; color: gray;">
+            <p>Nick Ling C# Web Applications Final</p>
+        </footer>        
+    </div>
+    </form>
+</body>
+</html>

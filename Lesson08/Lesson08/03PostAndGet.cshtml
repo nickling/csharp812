@@ -1,0 +1,45 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    @{ // Of course you can use traditional C# (or VB.NET) code to include conditional logic.
+        var result = "";
+
+        // When a page is first requested it uses the HTTP GET verb.
+        // The "IsPost" system variable tests to see if we are using the POST verb as opposed to GET.
+        // This is similar, but not the same, as IsPostBack in an .aspx web page.
+        if (IsPost)
+        {
+            result = "This page was posted using the Submit button.";
+        }
+        else
+        {
+            result = "GET is always the first request for the page, but could be additional ones as well.";
+        }
+    }
+</head>
+<body>
+    @* You use the Web Server's Object Model to work with things like the Request Object in Razor code. *@
+    <table border="1">
+        <tr style="font-style:italic">
+            <td>Requested URL</td>
+            <td>Relative Path</td>
+            <td>Full Path</td>
+            <td>HTTP Request Type</td>
+        </tr>
+        <tr>
+            <td>@Request.Url</td>
+            <td>@Request.FilePath</td>
+            <td>@Request.MapPath(Request.FilePath)</td>
+            <td>@Request.RequestType</td>
+        </tr>
+    </table>
+
+    <form method="post" action="03PostAndGet.cshtml">
+        @*Change the Method from post to get and test it *@
+        <input type="Submit" name="Submit" value="Submit" />
+        <p>@result</p>
+    </form>
+
+</body>
+</html>
